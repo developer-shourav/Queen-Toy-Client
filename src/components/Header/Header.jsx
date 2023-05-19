@@ -99,9 +99,9 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow-lg bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow-lg shadow-cyan-400 bg-[#202226fa] rounded-box w-52"
             >
-              <div className="avatar online mx-auto">
+              <div className="avatar online mx-auto mt-4">
                 <div className="w-12 rounded-full">
                   <img src="https://img.freepik.com/free-photo/handsome-young-businessman-suit_273609-6513.jpg" />
                 </div>
@@ -111,7 +111,7 @@ const Header = () => {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
                   }
                   to="/home"
                 >
@@ -120,34 +120,50 @@ const Header = () => {
               </li>
 
               <li>
-                <Link to='/profile'className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/all_toys"
+                >
+                  All Toys
+                </NavLink>
               </li>
 
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
                   }
-                  to="/register"
+                  to="/my_toys"
                 >
-                  Register
+                  My Toys
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
                   }
-                  to="/login"
-                >
-                  Login
-                </NavLink>
+                  to="/add_a_toy"
+                >Add A Toy</NavLink>
               </li>
               <li>
-                <a>Logout</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/blog"
+                >Blogs</NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/register"
+                >Register</NavLink>
               </li>
             </ul>
           </div>

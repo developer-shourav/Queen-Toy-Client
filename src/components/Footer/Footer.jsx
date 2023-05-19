@@ -150,37 +150,63 @@ const Footer = () => {
 
         <div className="w-11/12 mx-auto flex flex-col lg:flex-row justify-between">
           <div className=" flex flex-col text-center lg:text-left  lg:flex-row gap-6 list-none">
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
-                }
-                to="/home"
-              >
-                Home
-              </NavLink>
-            </li>
+          <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/home"
+                >
+                  Home
+                </NavLink>
+              </li>
 
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
-                }
-                to="/register"
-              >
-                Register
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
-                }
-                to="/login"
-              >
-                Login
-              </NavLink>
-            </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/all_toys"
+                >
+                  All Toys
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/my_toys"
+                >
+                  My Toys
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/add_a_toy"
+                >Add A Toy</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/blog"
+                >Blogs</NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/register"
+                >Register</NavLink>
+              </li>
           </div>
 
           <p className="text-sm flex gap-1 items-center text-center mx-auto lg:mx-0 mt-10  lg:mt-0">
