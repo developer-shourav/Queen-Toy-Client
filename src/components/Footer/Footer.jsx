@@ -2,12 +2,14 @@ import React from "react";
 import {SiJsonwebtokens, SiExpress, SiMongodb, SiNextdotjs} from 'react-icons/si';
 import {BsFillDatabaseFill, BsFillTelephoneFill} from 'react-icons/bs';
 import {MdMail} from 'react-icons/md';
+import {FaCopyright} from 'react-icons/fa';
+import {  NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="bg-[#202226]  py-16 mt-60 text-white">
       <div className="container mx-auto px-5">
-        <div className="lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 ">
           <div>
             <h2 className="text-2xl font-bold mb-5 text-[#4acdd5]">About Us</h2>
             <p className="text-stone-300 text-sm mb-4">We are the best desny toy seller. You can get all kinds of desny toys here. Our main goal is to provide the best quality products and get customer satisfaction. We want to spread joy through the toy at your home. Help us by staying attached to us.</p>
@@ -62,6 +64,48 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <hr className="w-11/12 mt-14 mb-8 mx-auto  border-stone-600" />
+
+        <div className="w-11/12 mx-auto flex flex-col lg:flex-row justify-between"> 
+
+        <div className=" flex flex-col text-center lg:text-left  lg:flex-row gap-6 list-none">
+        <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/home"
+                >
+                  Home
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/register"
+                >
+                  Register
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/login"
+                >
+                  Login
+                </NavLink>
+              </li>
+        </div>
+
+        <p className="text-sm flex gap-1 items-center text-center mx-auto lg:mx-0 mt-10  lg:mt-0"><FaCopyright className="inline" /> All Copyright <span className="logo-style text-md text-bold text-[#4acdd5]">Queen Toy</span> reserved</p>
+        </div>
+       
+       
       </div>
     </div>
   );
