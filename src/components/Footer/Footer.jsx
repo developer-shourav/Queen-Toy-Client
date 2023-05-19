@@ -1,9 +1,10 @@
 import React from "react";
 import {SiJsonwebtokens, SiExpress, SiMongodb, SiNextdotjs} from 'react-icons/si';
-import {BsFillDatabaseFill, BsFillTelephoneFill} from 'react-icons/bs';
+import {BsFillDatabaseFill, BsFillTelephoneFill, BsLinkedin, BsYoutube, BsFacebook} from 'react-icons/bs';
 import {MdMail} from 'react-icons/md';
-import {FaCopyright} from 'react-icons/fa';
+import {FaCopyright, FaInstagramSquare} from 'react-icons/fa';
 import {  NavLink } from "react-router-dom";
+import Logo from '../../assets/images/logo/logo-medium.png';
 
 const Footer = () => {
   return (
@@ -35,32 +36,19 @@ const Footer = () => {
           </div>
 
           <div className="md:mx-20 w-8/12">
-            <h2 className="text-2xl font-bold mb-5 text-[#4acdd5]">Instagram</h2>
-            <div className="grid grid-cols-2 gap-1">
-              <div>
-                <img
-                  src="https://www.laughingplace.com/w/wp-content/uploads/2022/07/rapunzel-disney-designer-collection-ultimate-princess-celebration.jpg"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src="https://www.laughingplace.com/w/wp-content/uploads/2022/07/rapunzel-disney-designer-collection-ultimate-princess-celebration.jpg"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src="https://www.laughingplace.com/w/wp-content/uploads/2022/07/rapunzel-disney-designer-collection-ultimate-princess-celebration.jpg"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  src="https://www.laughingplace.com/w/wp-content/uploads/2022/07/rapunzel-disney-designer-collection-ultimate-princess-celebration.jpg"
-                  alt=""
-                />
-              </div>
+            <h2 className="text-2xl font-bold mb-2 text-[#4acdd5]">Contact Us</h2>
+            <div className="flex mb-5  items-end gap-2"> <img src={Logo} alt="" className="w-10 lg:w-12 " /><span className="logo-style text-2xl lg:text-3xl font-extrabold ">Queen Toy</span>
+            
+         </div>
+         <div className="flex gap-4">
+                <a className="p-2 bg-pink-600 rounded-md shadow-lg shadow-pink-600" href="https://www.linkedin.com/in/developer-shourav/" target="_blank">< BsLinkedin className="inline text-2xl" /></a>
+                
+                <a className="p-2 bg-pink-600 rounded-md shadow-lg shadow-pink-600" href="https://www.youtube.com/" target="_blank">< BsYoutube className="inline text-2xl" /></a>
+                
+                <a className="p-2 bg-pink-600 rounded-md shadow-lg shadow-pink-600" href="https://www.facebook.com/developer.shourav/" target="_blank">< BsFacebook className="inline text-2xl" /></a>
+                
+                <a className="p-2 bg-pink-600 rounded-md shadow-lg shadow-pink-600" href="https://www.instagram.com/" target="_blank">< FaInstagramSquare className="inline text-2xl" /></a>
+                
             </div>
           </div>
         </div>

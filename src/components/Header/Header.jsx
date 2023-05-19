@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { HiOutlineMenu } from "react-icons/hi";
+import Logo from '../../assets/images/logo/logo-medium.png';
+
 
 const Header = () => {
   const { user } = useContext(AuthContext);
@@ -10,7 +12,8 @@ const Header = () => {
       <nav className="container mx-auto ">
       <div className="navbar  ">
         <div className="flex-1">
-         <span className="logo-style text-2xl lg:text-3xl font-extrabold ">Queen Toy</span>
+         <div className="flex  items-end gap-2"> <img src={Logo} alt="" className="w-10 lg:w-12 drop-shadow-lg" /><span className="logo-style text-2xl lg:text-3xl font-extrabold ">Queen Toy</span>
+         </div>
         </div>
         <div className="flex-none">
           <div className=" hidden lg:block">
