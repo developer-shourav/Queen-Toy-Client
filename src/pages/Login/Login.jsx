@@ -10,9 +10,9 @@ const Login = () => {
   useTitle("Login");
   return (
     <div className="bg-pink-200  ">
-      <div className="container py-20 mx-auto">
-        <div className="w-8/12 bg-white  mx-auto flex items-center justify-center shadow-xl rounded">
-          <div className="w-5/12">
+      <div className="container py-10 md:py-20 mx-auto">
+        <div className="w-11/12  lg:w-8/12 bg-white  mx-auto flex flex-col-reverse md:flex-row items-center justify-center shadow-xl rounded">
+          <div className="w-full md:w-6/12 lg:w-5/12">
             <div className="card flex-shrink-0 w-full  bg-base-100">
               <div className="card-body">
                 <h2 className="text-3xl font-extrabold">Login</h2>
@@ -58,7 +58,8 @@ const Login = () => {
                 </form>
                 <div className="flex justify-center items-center mt-2">
                   <hr className="inline-block w-2/6 border-1 border-pink-500" />{" "}
-                  <span className="mx-1 font-semibold">Or join with</span>{" "}
+                  <span className="mx-1 hidden lg:inline font-semibold">Or join with</span>{" "}
+                  <span className="mx-1 lg:hidden font-semibold">Join with</span>{" "}
                   <hr className="inline-block border-1 w-2/6 border-pink-500" />
                 </div>
 
@@ -72,7 +73,7 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="w-7/12">
+          <div className="w-full md:w-7/12  lg:w-7/12">
             <img src={LoginImg} alt="" />
           </div>
         </div>
