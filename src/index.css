@@ -1,6 +1,8 @@
 
 /* ----------Custom Font-------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/* ----------Font For Logo---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +11,53 @@
 
 body{
     font-family: 'Nunito', sans-serif;
+    
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+
+/* ------------Color Template ------------------ */
+
+/* ===============================
+            Colors 
+================================== */
+.color-cyan{
+    color: #4acdd5;
+}
+
+
+.color-pink{
+    color:#ff6799;
+}
+
+.color-hading{
+    color: #222222;;
+}
+
+
+
+/* ==================================
+             BackGround Colors
+==================================== */
+.bg-cyan{
+    background-color:  #5bd9d9;
+}
+.bg-cyan-low{
+    background-color: #c2e0eb;
+}
+.bg-pink{
+    background-color: #ff6799;
+}
+.bg-yellow{
+    background-color: #fddb45;
+}
+.slider-bg{
+    color:#efe4e4;
+}
+
+.logo-style{
+    font-family: 'Cinzel', serif;
 }
