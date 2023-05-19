@@ -8,7 +8,7 @@ import Logo from '../../assets/images/logo/logo-medium.png';
 const Header = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="bg-[#5bd9d9] sticky top-0 left-0 z-50 shadow-xl rounded-0 lg:rounded-full">
+    <div className="bg-[#5bd9d9]  sticky top-0 left-0 z-50 shadow-xl rounded-0 lg:rounded-full">
       <nav className="container mx-auto ">
       <div className="navbar  ">
         <div className="flex-1">
@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div className="flex-none">
           <div className=" hidden lg:block">
-            <ul className="flex font-bold gap-x-8">
+            <ul className="flex font-bold gap-x-6">
 
               <li>
                 <NavLink
@@ -35,9 +35,9 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "text-[#ff6799] bg-transparent" : ""
                   }
-                  to="/register"
+                  to="/all_toys"
                 >
-                  Register
+                  All Toys
                 </NavLink>
               </li>
 
@@ -46,10 +46,35 @@ const Header = () => {
                   className={({ isActive }) =>
                     isActive ? "text-[#ff6799] bg-transparent" : ""
                   }
-                  to="/login"
+                  to="/my_toys"
                 >
-                  Login
+                  My Toys
                 </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/add_a_toy"
+                >Add A Toy</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/blog"
+                >Blogs</NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/register"
+                >Register</NavLink>
               </li>
 
             </ul>
