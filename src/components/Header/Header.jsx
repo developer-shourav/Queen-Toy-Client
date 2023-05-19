@@ -77,6 +77,14 @@ const Header = () => {
                 >Register</NavLink>
               </li>
 
+              <li>
+                <Link to='/login' className="py-3 bg-[#ff6799] shadow-md  rounded-full px-5 uppercase   text-white">Login</Link>
+              </li>
+
+              <li>
+                <Link  className="py-3 bg-[#fff047] text-black shadow-md rounded-full px-5 uppercase  ">Log Out</Link>
+              </li>
+
             </ul>
           </div>
 
@@ -164,6 +172,20 @@ const Header = () => {
                   }
                   to="/register"
                 >Register</NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : "text-[#4acdd5]"
+                  }
+                  to="/login"
+                >Login</NavLink>
+              </li>
+              
+
+              <li className="text-center bg-[#fff047] rounded">
+                <button to='/login' className="py-3 bg-[#fff047] text-black mx-auto shadow-md  px-5  uppercase">Log Out</button>
               </li>
             </ul>
           </div>
