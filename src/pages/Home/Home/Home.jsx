@@ -5,7 +5,7 @@ const Home = () => {
     /* -------------Dynamic Title Adding hook---------- */
    /*  useTitle('Home') */
     return (
-        <div>
+        <div className='container mx-auto'>
             <h2>This is home</h2>
             <h2>This is home</h2>
             <h2>This is home</h2>

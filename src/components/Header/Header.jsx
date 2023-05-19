@@ -6,7 +6,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 const Header = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="bg-[#5bd9d9] sticky top-0 left-0 z-50 shadow">
+    <div className="bg-[#5bd9d9] sticky top-0 left-0 z-50 shadow-xl rounded-0 lg:rounded-full">
       <nav className="container mx-auto ">
       <div className="navbar  ">
         <div className="flex-1">
@@ -64,7 +64,7 @@ const Header = () => {
               >
                 <div className="avatar online mx-2">
                   <div className="w-12 rounded-full">
-                    <img src="https://rb.gy/3o5sr" />
+                    <img src="https://img.freepik.com/free-photo/handsome-young-businessman-suit_273609-6513.jpg" />
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Header = () => {
             >
               <div className="avatar online mx-auto">
                 <div className="w-12 rounded-full">
-                  <img src="https://rb.gy/3o5sr" />
+                  <img src="https://img.freepik.com/free-photo/handsome-young-businessman-suit_273609-6513.jpg" />
                 </div>
               </div>
 
