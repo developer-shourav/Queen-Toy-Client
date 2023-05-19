@@ -6,19 +6,20 @@ import { HiOutlineMenu } from "react-icons/hi";
 const Header = () => {
   const { user } = useContext(AuthContext);
   return (
-    <nav className="container mx-auto ">
-      <div className="navbar shadow-lg bg-base-100">
+    <div className="bg-[#5bd9d9] sticky top-0 left-0 z-50 shadow">
+      <nav className="container mx-auto ">
+      <div className="navbar  ">
         <div className="flex-1">
-          <span className="text-2xl font-bold logo-style">Queen Toy</span>
+         <span className="logo-style text-2xl lg:text-3xl font-extrabold ">Queen Toy</span>
         </div>
         <div className="flex-none">
-          <div>
+          <div className=" hidden lg:block">
             <ul className="flex font-bold gap-x-8">
 
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-red-500 bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
                   }
                   to="/home"
                 >
@@ -29,7 +30,7 @@ const Header = () => {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-red-500 bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
                   }
                   to="/register"
                 >
@@ -40,7 +41,7 @@ const Header = () => {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "text-red-500 bg-transparent" : ""
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
                   }
                   to="/login"
                 >
@@ -54,7 +55,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <div className="flex items-center justify-center">
               <span className="d-block lg:hidden">
-                <HiOutlineMenu tabIndex={0}></HiOutlineMenu>
+                <HiOutlineMenu className="text-2xl" tabIndex={0}></HiOutlineMenu>
               </span>
               {/* -----------User Image ---------- */}
               <div
@@ -77,14 +78,45 @@ const Header = () => {
                   <img src="https://rb.gy/3o5sr" />
                 </div>
               </div>
+
+             
               <li>
-                <a className="justify-between">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/home"
+                >
+                  Home
+                </NavLink>
+              </li>
+
+              <li>
+                <Link to='/profile'className="justify-between">
                   Profile
                   <span className="badge">New</span>
-                </a>
+                </Link>
+              </li>
+
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/register"
+                >
+                  Register
+                </NavLink>
               </li>
               <li>
-                <Link to="/register">Register</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-[#ff6799] bg-transparent" : ""
+                  }
+                  to="/login"
+                >
+                  Login
+                </NavLink>
               </li>
               <li>
                 <a>Logout</a>
@@ -94,6 +126,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
