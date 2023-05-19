@@ -13,8 +13,8 @@ const Register = () => {
         <div className="bg-pink-200  ">
         <div className="container py-10 md:py-20 mx-auto">
           <div className="w-11/12  lg:w-8/12 bg-white  mx-auto flex flex-col md:flex-row items-center justify-center shadow-xl rounded">
-            <div className="w-full hidden md:block md:w-6/12 lg:w-4/12">
-             <img className="w-full h-full p-4" src={RegisterImg} alt="" />
+            <div className="w-full hidden md:block md:w-5/12 lg:w-4/12">
+             <img className="w-full h-full px-4" src={RegisterImg} alt="" />
             </div>
   
             <div className="w-full md:w-7/12  lg:w-8/12">
@@ -23,6 +23,26 @@ const Register = () => {
                 <div className="card-body">
                   <h2 className="text-3xl font-extrabold">Register</h2>
                   <form>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Name</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Your Name"
+                        className="input input-bordered"
+                      />
+                    </div>
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">Photo Url</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Photo Url"
+                        className="input input-bordered"
+                      />
+                    </div>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Email</span>
@@ -38,7 +58,7 @@ const Register = () => {
                         <span className="label-text">Password</span>
                       </label>
                       <input
-                        type="text"
+                        type="password"
                         placeholder="password"
                         className="input input-bordered"
                       />
@@ -54,7 +74,7 @@ const Register = () => {
                         </p>
                       </label>
                     </div>
-                    <div className="form-control mt-6">
+                    <div className="form-control mt-2">
                       <input
                         className="btn btn-primary bg-cyan-500 border-0 hover:bg-cyan-600"
                         type="submit"
