@@ -63,3 +63,12 @@ html{
 .logo-style{
     font-family: 'Cinzel', serif;
 }
+
+
+.custom-text-shadow{
+    text-shadow: 1px 1px black;
+}
+
+.logo-text-shadow{
+    text-shadow:1px 1px #ff2247;
+}

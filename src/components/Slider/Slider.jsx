@@ -37,8 +37,8 @@ const Slider = () => {
         {/* ----------------Website Top Banner Slider Item One --------------------- */}
         <SwiperSlide>
           <div className="flex justify-between items-center">
-            <div>
-              <img src={SliderImg1} className="h-80" alt="" />
+            <div className="h-80">
+              <img src={SliderImg1} className="" alt="" />
             </div>
 
             <div>
