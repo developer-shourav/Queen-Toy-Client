@@ -1,4 +1,5 @@
 import React from 'react';
+import TopBanner from '../TopBanner/TopBanner';
 /* import useTitle from '../../../Hooks/useTitle'; */
 
 const Home = () => {
@@ -6,64 +7,8 @@ const Home = () => {
    /*  useTitle('Home') */
     return (
         <div className='container mx-auto'>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
-            <h2>This is home</h2>
+            {/* -----------Top Banner Section---------- */}
+            <TopBanner> </TopBanner>
         </div>
     );
 };
