@@ -72,3 +72,10 @@ html{
 .logo-text-shadow{
     text-shadow:1px 1px #ff2247;
 }
+
+.gallery img {
+     transition: all .5s ease;
+}
+.gallery img:hover {
+     transform: scale(1.25);
+}
