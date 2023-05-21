@@ -1,5 +1,4 @@
 import React from "react";
-import Slider from "../../../components/Slider/Slider";
 import Banner from "../../../assets/images/banner-img/banner1.png";
 import SliderImg1 from "../../../assets/images/banner-img/sindralla.png";
 import SliderImg2 from "../../../assets/images/banner-img/sindralla2.png";
@@ -9,9 +8,7 @@ const Home = () => {
   return (
     <div className="container mx-auto">
       {/* -----------Top Banner Section---------- */}
-      {/*  <Slider> </Slider> */}
 
-      {/* ---------------- Banner ------------- */}
 
       <div>
         <div className="">
