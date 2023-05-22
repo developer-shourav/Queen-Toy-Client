@@ -2,8 +2,10 @@ import React from "react";
 import TopBanner from "../TopBanner/TopBanner";
 import BorderB from '../../../assets/images/border-img/borderB.svg';
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
+import useTitle from "../../../Hooks/useTitle";
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
+  useTitle('Home')
   return (
     <div className="container mx-auto">
       {/* -----------Top Banner Section---------- */}

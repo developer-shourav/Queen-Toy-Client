@@ -1,13 +1,74 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 import LoginImg from "../../assets/images/login-svg/login.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
+import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Login");
+
+  const {signInUserWithEmail, registerWithGoogle, registerWithGitHub} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  /* ----------Previous location ---------- */
+  const redirectLocation = location.state?.from?.pathname || '/home';
+
+  const [errorText, setErrorText] = useState('');
+
+  const handleEmailPassLogIn = event => {
+
+    /*----- Reset Error Massage field------- */
+    setErrorText('')
+
+    /* ------ Handle default page reload on form submit-------- */
+    event.preventDefault();
+    /* ------- Data Collection -------------- */
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+  /* ------- Email password Login System Code-------------- */
+    signInUserWithEmail(email, password)
+    .then( result => {
+      const loggedInUser = result.user;
+      navigate(redirectLocation)
+      
+    })
+    .catch( error =>{
+      setErrorText(error.message.slice(10))
+    })
+  }
+/* ------- Google Login Code-------------- */
+  const handleGoogleLogin = () => {
+    setErrorText('')
+    registerWithGoogle()
+    .then( result => {
+      const loggedInUser = result.user;
+      navigate(redirectLocation)
+      
+    })
+    .catch( error =>{
+      setErrorText(error.message.slice(10))
+    })
+  }
+
+/* ------- GitHub Login Code-------------- */
+  const handleGitHubLogin = () => {
+    setErrorText('')
+    registerWithGitHub()
+    .then( result => {
+      const loggedInUser = result.user;
+      navigate(redirectLocation)
+      
+    })
+    .catch( error =>{
+      setErrorText(error.message.slice(10))
+    })
+  }
+
   return (
     <div className="bg-pink-200  ">
       <div className="container py-10 md:py-20 mx-auto">
@@ -16,7 +77,8 @@ const Login = () => {
             <div className="card flex-shrink-0 w-full  bg-base-100">
               <div className="card-body">
                 <h2 className="text-3xl font-extrabold">Login</h2>
-                <form>
+                
+                <form onSubmit={handleEmailPassLogIn}>
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Email</span>
@@ -24,7 +86,9 @@ const Login = () => {
                     <input
                       type="text"
                       placeholder="email"
+                      name="email"
                       className="input input-bordered"
+                      required
                     />
                   </div>
                   <div className="form-control">
@@ -32,9 +96,11 @@ const Login = () => {
                       <span className="label-text">Password</span>
                     </label>
                     <input
-                      type="text"
+                      type="password"
+                      name="password"
                       placeholder="password"
                       className="input input-bordered"
+                      required
                     />
                     <label className="label">
                       <p className="text-sm">
@@ -42,12 +108,16 @@ const Login = () => {
                         <Link
                           className="font-bold text-blue-600 hover:text-blue-700 hover:underline "
                           to="/register"
+                          state={{from :location?.state?.from}} 
                         >
                           Register
                         </Link>
                       </p>
                     </label>
                   </div>
+
+                   {/* --------Error Message -------- */}
+                   <p className='text-red-500 font-semibold'>{errorText}</p>
                   <div className="form-control mt-6">
                     <input
                       className="btn btn-primary bg-[#fa578e] border-0 hover:bg-pink-700"
@@ -64,9 +134,9 @@ const Login = () => {
                 </div>
 
                 <div className="flex gap-2">
-                <button className="btn  font-bold  normal-case btn-outline w-1/2"><img className="w-5 me-2" src={GoogleIcon} alt="" />Google</button> 
+                <button onClick={handleGoogleLogin} className="btn  font-bold  normal-case btn-outline w-1/2"><img className="w-5 me-2" src={GoogleIcon} alt="" />Google</button> 
 
-                <button className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />Google</button> 
+                <button onClick={handleGitHubLogin} className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />Google</button> 
                 
                 </div>
               </div>
