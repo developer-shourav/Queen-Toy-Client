@@ -5,6 +5,7 @@ import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import useTitle from "../../../Hooks/useTitle";
 import BrandsListMarquee from "../../../components/BrandsListMarquee/BrandsListMarquee";
 import OurServices from "../../../components/OurServices/OurServices";
+import SellPoster from "../../../components/SellPoster/SellPoster";
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Home");
@@ -50,6 +51,24 @@ const Home = () => {
         {/* ----------Our Services ---------- */}
         <OurServices> </OurServices>
       </div>
+
+
+      {/* ============Product Category Section =============== */}
+       
+       
+            {/* ---------- All Category  ------------ */}
+
+
+
+
+
+
+
+
+
+
+      {/* ==========Offer Poster Section===========*/}
+      <SellPoster> </SellPoster>
     </div>
   );
 };
