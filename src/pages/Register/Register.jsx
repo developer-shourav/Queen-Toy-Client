@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
 import { AuthContext } from "../../providers/AuthProviders";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -30,7 +31,7 @@ const Register = () => {
     const photo = form.photo.value;
     
 /* -----------Password Validation----------- */
-    if( password.length < 6 || finalPassword.length < 6){
+    if( password.length < 6 ){
      
       setErrorMessage('Error: Your Password must be at least 6 character')
       return ;
@@ -165,6 +166,8 @@ const Register = () => {
                         </p>
                       </label>
                     </div>
+                     {/* --------Error Message -------- */}
+                    <p className='text-red-500 font-semibold'>{errorMessage}</p>
                     <div className="form-control mt-2">
                       <input
                         className="btn btn-primary bg-cyan-500 border-0 hover:bg-cyan-600"
