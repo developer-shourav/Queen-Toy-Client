@@ -79,3 +79,11 @@ html{
 .gallery img:hover {
      transform: scale(1.25);
 }
+
+.brand-img > img{
+    display: inline;
+    width: 120px;
+    height: 90px;
+    margin : 0 20px ;
+  
+   }

@@ -3,6 +3,7 @@ import TopBanner from "../TopBanner/TopBanner";
 import BorderB from '../../../assets/images/border-img/borderB.svg';
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import useTitle from "../../../Hooks/useTitle";
+import BrandsListMarquee from "../../../components/BrandsListMarquee/BrandsListMarquee";
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle('Home')
@@ -20,6 +21,12 @@ const Home = () => {
 
         {/* ----------Gallery ---------- */}
         <PhotoGallery> </PhotoGallery>
+      </div>
+
+      {/* -----------Brands Section---------- */}
+      <div className=" ">
+        {/* ----------Brand image ---------- */}
+        <BrandsListMarquee> </BrandsListMarquee>
       </div>
      
     </div>

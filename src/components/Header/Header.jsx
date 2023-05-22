@@ -111,12 +111,12 @@ const Header = () => {
 
                 {user ? (
                   <li>
-                    <Link
+                    <span
                       onClick={handleLogOut}
                       className="py-3 bg-[#fff047] text-black shadow-md rounded-full px-5 uppercase  "
                     >
                       Log Out
-                    </Link>
+                    </span>
                   </li>
                 ) : (
                   <li>
