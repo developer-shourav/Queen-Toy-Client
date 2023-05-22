@@ -1,14 +1,96 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 import RegisterImg from "../../assets/images/register-webp/register.webp";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 const Register = () => {
      /* -------------Dynamic Title Adding hook---------- */
      useTitle('Register')
+
+  const { createEmailPassUser, registerWithGoogle, registerWithGitHub } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const redirectLocation = location?.state?.from?.pathname || '/home';
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleRegister = (event) => {
+    /*----- Reset Error Massage ------- */
+    setErrorMessage('')
+      /* ------ Handle default page reload -------- */
+    event.preventDefault();
+    /* ------- Data Collection -------------- */
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photo = form.photo.value;
+    
+/* -----------Password Validation----------- */
+    if( password.length < 6 || finalPassword.length < 6){
+     
+      setErrorMessage('Error: Your Password must be at least 6 character')
+      return ;
+    }
+
+    else{
+       /* ------- Email password User creation -------------- */
+    createEmailPassUser(email, password)
+    .then((result) => {
+      const createdUser = result.user;
+      addUserNameAndImage(result.user, name, photo);
+    })
+
+    .catch((error) => {
+      setErrorMessage(error.message.slice(10))
+    });
+    }
+ 
+
+  };
+/* ------- User name and Profile picture updating -------------- */
+  const addUserNameAndImage = (user, userName, imageUrl) => {
+    setErrorMessage('')
+    updateProfile(user, { displayName: userName, photoURL: imageUrl })
+      .then(() => {
+        navigate(redirectLocation);
+      })
+      .catch((error) => {
+        setErrorMessage(error.message.slice(10))
+      });
+  };
+
+  /* ------- Google Register Function's Code-------------- */
+  const handleGoogleRegister = () => {
+    setErrorMessage('')
+    registerWithGoogle()
+    .then( result => {
+      const loggedInUser = result.user;
+      navigate(redirectLocation)
+      
+    })
+    .catch( error =>{
+      setErrorMessage(error.message.slice(10))
+    })
+  }
+/* ------- GitHub Register System Code-------------- */
+  const handleGitHubRegister = () => {
+    setErrorMessage('')
+    registerWithGitHub()
+    .then( result => {
+      const loggedInUser = result.user;
+      navigate(redirectLocation)
+      
+    })
+    .catch( error =>{
+      setErrorMessage(error.message.slice(10))
+    })
+  }
+
+
     return (
         <div className="bg-pink-200  ">
         <div className="container py-10 md:py-20 mx-auto">
@@ -22,7 +104,8 @@ const Register = () => {
               <div className="card flex-shrink-0 w-full  bg-base-100">
                 <div className="card-body">
                   <h2 className="text-3xl font-extrabold">Register</h2>
-                  <form>
+
+                  <form onSubmit={handleRegister}>
                     <div className="form-control">
                       <label className="label">
                         <span className="label-text">Name</span>
@@ -30,7 +113,9 @@ const Register = () => {
                       <input
                         type="text"
                         placeholder="Your Name"
+                        name="name"
                         className="input input-bordered"
+                        required
                       />
                     </div>
                     <div className="form-control">
@@ -40,7 +125,9 @@ const Register = () => {
                       <input
                         type="text"
                         placeholder="Photo Url"
+                        name="photo"
                         className="input input-bordered"
+                        required
                       />
                     </div>
                     <div className="form-control">
@@ -50,6 +137,8 @@ const Register = () => {
                       <input
                         type="text"
                         placeholder="email"
+                        name="email"
+                        required
                         className="input input-bordered"
                       />
                     </div>
@@ -60,6 +149,8 @@ const Register = () => {
                       <input
                         type="password"
                         placeholder="password"
+                        name="password"
+                        required
                         className="input input-bordered"
                       />
                       <label className="label">
@@ -90,9 +181,9 @@ const Register = () => {
                   </div>
   
                   <div className="flex gap-2">
-                  <button className="btn  font-bold  normal-case btn-outline w-1/2"><img className="w-5 me-2" src={GoogleIcon} alt="" />Google</button> 
+                  <button onClick={handleGoogleRegister} className="btn  font-bold  normal-case btn-outline w-1/2"><img className="w-5 me-2" src={GoogleIcon} alt="" />Google</button> 
   
-                  <button className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />Google</button> 
+                  <button onClick={handleGitHubRegister} className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />GitHub</button> 
                   
                   </div>
                 </div>

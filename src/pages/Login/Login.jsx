@@ -136,7 +136,7 @@ const Login = () => {
                 <div className="flex gap-2">
                 <button onClick={handleGoogleLogin} className="btn  font-bold  normal-case btn-outline w-1/2"><img className="w-5 me-2" src={GoogleIcon} alt="" />Google</button> 
 
-                <button onClick={handleGitHubLogin} className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />Google</button> 
+                <button onClick={handleGitHubLogin} className="btn font-bold normal-case btn-outline w-1/2"><BsGithub className=" text-xl me-2" />GitHub</button> 
                 
                 </div>
               </div>
