@@ -10,6 +10,39 @@ const AddAToy = () => {
 
   /* -------User Data -------- */
   const { user } = useContext(AuthContext);
+
+  const handleAddToy = event => {
+    /* ---------For Preventing default reload----------- */
+    event.preventDefault()
+    const form = event.target;
+    const photo = form.photo.value;
+    const toyName = form.toyName.value;
+    const category = form.category.value;
+    const subCategory = form.subCategory.value;
+    const quantity = form.quantity.value;
+    const seller = form.seller.value;
+    const sellerEmail = form.sellerEmail.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const details = form.details.value;
+
+    const newToy = {
+      photo,
+      toyName,
+      category,
+      subCategory,
+      quantity,
+      seller,
+      sellerEmail,
+      price,
+      rating,
+      details
+    };
+   
+    console.log(newToy);
+  }
+
+  
   return (
     <div className="mt-10 container mx-auto px-3">
       <div className="text-center text-3xl font-bold   flex items-center justify-center gap-3">
@@ -19,7 +52,8 @@ const AddAToy = () => {
       </div>
 
       <div className="lg:w-10/12 mx-auto">
-        <form className="">
+
+        <form onSubmit={handleAddToy}>
           <div className="form-control mb-3">
             <label className="label">
               <span className="label-text">Toy Image URL</span>
