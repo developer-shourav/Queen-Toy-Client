@@ -2,6 +2,7 @@ import React from 'react';
 import useTitle from '../../Hooks/useTitle';
 import questionImg from '../../assets/images/Blog-img/question.png';
 import Blog from './Blog';
+import { ScrollRestoration } from 'react-router-dom';
 
 const Blogs = () => {
     useTitle('Blog')
@@ -17,6 +18,7 @@ const Blogs = () => {
             <Blog> </Blog>
           </div>
         </div>
+        <ScrollRestoration />
       </div>
     );
   };

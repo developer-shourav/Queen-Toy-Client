@@ -6,6 +6,7 @@ import useTitle from "../../../Hooks/useTitle";
 import BrandsListMarquee from "../../../components/BrandsListMarquee/BrandsListMarquee";
 import OurServices from "../../../components/OurServices/OurServices";
 import SellPoster from "../../../components/SellPoster/SellPoster";
+import { ScrollRestoration } from "react-router-dom";
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Home");
@@ -69,6 +70,7 @@ const Home = () => {
 
       {/* ==========Offer Poster Section===========*/}
       <SellPoster> </SellPoster>
+      <ScrollRestoration />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 import RegisterImg from "../../assets/images/register-webp/register.webp";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
 import { AuthContext } from "../../providers/AuthProviders";
@@ -194,6 +194,7 @@ const Register = () => {
             </div>
           </div>
         </div>
+        <ScrollRestoration />
       </div>
     );
 };

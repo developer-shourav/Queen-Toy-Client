@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import useTitle from "../../Hooks/useTitle";
 import { AuthContext } from "../../providers/AuthProviders";
+import { ScrollRestoration } from "react-router-dom";
 
 const AllToys = () => {
   /* ---------Dynamic Title----------- */
@@ -149,6 +150,7 @@ const AllToys = () => {
          
         </table>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };

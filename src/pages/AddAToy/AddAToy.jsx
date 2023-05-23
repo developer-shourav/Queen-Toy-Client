@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import useTitle from "../../Hooks/useTitle";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import { AuthContext } from "../../providers/AuthProviders";
+import { ScrollRestoration } from "react-router-dom";
 
 const AddAToy = () => {
   /* -----------Dynamic Title------------- */
@@ -178,6 +179,7 @@ const AddAToy = () => {
           <input className="btn btn-secondary bg-pink-600 w-full mt-5" type="submit" value="ADD TOY" />
         </form>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };

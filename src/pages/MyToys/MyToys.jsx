@@ -1,5 +1,6 @@
 import React from 'react';
 import useTitle from '../../Hooks/useTitle';
+import { ScrollRestoration } from 'react-router-dom';
 
 const MyToys = () => {
     useTitle('My Toys')
@@ -10,6 +11,8 @@ const MyToys = () => {
             <div>
                 
             </div>
+
+            <ScrollRestoration />
         </div>
     );
 };

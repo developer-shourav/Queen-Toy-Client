@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 import LoginImg from "../../assets/images/login-svg/login.svg";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
 import { AuthContext } from "../../providers/AuthProviders";
@@ -148,6 +148,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };
