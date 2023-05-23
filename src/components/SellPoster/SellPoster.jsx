@@ -10,8 +10,8 @@ const SellPoster = () => {
         </div>
 
         <div className="mt-8">
-            <h1 className="text-4xl md:text-3xl lg:text-6xl text-stone-200 mb-3">Amazing Toy On Sale</h1>
-            <p className=" text-white  md:mt-3 lg:mt-5"><span className="bg-cyan-500 px-6 py-2">Save up to 25% </span></p>
+            <h1 className="text-4xl md:text-3xl lg:text-6xl text-stone-100 mb-3">Amazing Toy On Sale</h1>
+            <p className=" text-white  md:mt-3 lg:mt-5"><span className="bg-cyan-500 px-6 py-2 ">Save up to 25% </span></p>
             <br />
             <span className="btn bg-[#fddb45] hover:bg-[#d1ab00] border-0 text-black font-bold rounded-full px-5">Shop Now</span>
         </div>

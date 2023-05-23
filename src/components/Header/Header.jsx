@@ -249,7 +249,7 @@ const Header = () => {
 
                 {user ? (
                   <li onClick={handleLogOut} className="text-center bg-[#fff047] rounded">
-                    <button className="py-3 bg-[#fff047] text-black mx-auto shadow-md  px-5  uppercase">
+                    <button className="py-3 text-black mx-auto shadow-md  px-5  uppercase">
                       Log Out
                     </button>
                   </li>
