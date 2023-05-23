@@ -7,6 +7,7 @@ import BrandsListMarquee from "../../../components/BrandsListMarquee/BrandsListM
 import OurServices from "../../../components/OurServices/OurServices";
 import SellPoster from "../../../components/SellPoster/SellPoster";
 import { ScrollRestoration } from "react-router-dom";
+import ToyCategory from "../ToyCategory/ToyCategory";
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Home");
@@ -58,7 +59,7 @@ const Home = () => {
        
        
             {/* ---------- All Category  ------------ */}
-
+            <ToyCategory> </ToyCategory>
 
 
 
