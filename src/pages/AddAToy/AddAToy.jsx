@@ -95,9 +95,9 @@ const AddAToy = () => {
                 <label className="input-group rounded-s ">
                 <select className="select select-bordered w-full" required name="subCategory">
                
-                <option>Disney princes</option>
-                <option>Disney Queen</option>
-                <option>Evil Queen</option>
+                <option>princes</option>
+                <option>queen</option>
+                <option>evil</option>
               </select>
                 </label>
               </div>

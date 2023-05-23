@@ -1,21 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BorderB from "../../../assets/images/border-img/borderB.svg";
+import ToyCard from "./ToyCard";
 const ToyCategory = () => {
-  const [tab, setTab] = useState("all");
+  const [tabStyle, setTabStyle] = useState("all");
+  const [toysData, setToysData] = useState([]);
+  const [filteredData, setFilteredData] = useState(toysData)
+  const [dataReloader, setDataReloader] = useState(false);
+
+
+
   /* --------Tab content and Condition--------- */
   const handleAllToy = () => {
-      setTab("all");
+    setTabStyle("all")
+    setDataReloader(!dataReloader)
+    setFilteredData(toysData)
+    setDataReloader(true)
     };
     const handleQueensToy = () => {
-      setTab("queens");
+      setTabStyle("queen")
+      const queensToy = toysData?.filter( data => data.subCategory == 'queen');
+      setFilteredData(queensToy)
+      setDataReloader(true)
     };
   const handleEvilsToy = () => {
-    setTab("evils");
+    setTabStyle("evil")
+    const evilToy = toysData?.filter( data => data.subCategory == 'evil');
+    setFilteredData(evilToy)
+    setDataReloader(true)
   };
   const handlePrincesToy = () => {
-    setTab("princes");
+    setTabStyle("princes")
+    const princesToy = toysData?.filter( data => data.subCategory == 'princes');
+    setFilteredData(princesToy)
+    setDataReloader(true)
   };
 
+  useEffect( () => {
+    fetch('http://localhost:5000/toys')
+    .then( res => res.json())
+    .then( data => setToysData(data))
+  }, [dataReloader])
+
+  console.log(toysData);
 
   return (
     <div>
@@ -36,8 +62,8 @@ const ToyCategory = () => {
         <div className=" text-center font-bold space-x-1 md:space-x-3 space-y-2  md:mt-10">
           <button
             onClick={handleAllToy}
-            className={`btn  rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
-              tab == "all" ? "bg-pink-500 text-white" : ""
+            className={`btn  rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "all" ? "bg-pink-500 text-white" : " text-black bg-white"
             }`}
           >
             All
@@ -45,30 +71,48 @@ const ToyCategory = () => {
 
           <button
             onClick={handleQueensToy}
-            className={`btn rounded-full  md:px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
-              tab == "queens" ? "bg-pink-500 text-white" : ""
+            className={`btn rounded-full  md:px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "queen"? "bg-pink-500 text-white" : " text-black bg-white"
             }`}
           >
-            Good Queens
+            Disney Queens
           </button>
 
           <button
             onClick={handleEvilsToy}
-            className={`btn rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
-              tab == "evils" ? "bg-pink-500 text-white" : ""
+            className={`btn rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "evil" ? "bg-pink-500 text-white" : " text-black bg-white"
             }`}
           >
-            Evil Queens
+           Disney Evil 
           </button>
 
           <button
             onClick={handlePrincesToy}
-            className={`btn rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
-              tab == "princes" ? "bg-pink-500 text-white" : ""
+            className={`btn rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "princes" ? "bg-pink-500 text-white" : " text-black bg-white"
             }`}
           >
-            Princes
+           Disney Princes
           </button>
+        </div>
+
+        {/* ----------------Toys Card------------------- */}
+        <div className=" mx-3  md:mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16">
+
+          { dataReloader && 
+            filteredData.map ( toy => <ToyCard
+            key={toy?._id}
+            toy={toy}
+            > </ToyCard>)
+          }
+          { !dataReloader && 
+            toysData.map ( toy => <ToyCard
+            key={toy?._id}
+            toy={toy}
+            > </ToyCard>)
+          }
+          
         </div>
       </div>
     </div>

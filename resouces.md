@@ -1,28 +1,22 @@
 ## Princes
 
-https://i.ibb.co/WKR5r2K/Cinderella.jpg
-https://i.ibb.co/7vX3PbJ/sweet.jpg
-https://i.ibb.co/Xzg5qpz/Mattel-Disney-Princess.jpg
-https://i.ibb.co/GsYkctp/1.jpg
-https://i.ibb.co/DzBfd6S/2.jpg
 https://i.ibb.co/HHP4swW/3.webp
 https://i.ibb.co/smDLJD9/4.webp
 
 
 
 ## Queens 
-https://i.ibb.co/gTh6cYC/1.jpg
-https://i.ibb.co/5YKNnRt/queen2.jpg
-https://i.ibb.co/Stfh4gd/queen3.jpg
-https://i.ibb.co/yWgmp3D/queen4.jpg
 
 ## Evil 
 https://i.ibb.co/VTcnsPW/32.jpg
-https://i.ibb.co/PMBzW6b/25.jpg
 https://i.ibb.co/8D5kPN7/10.webp
-https://i.ibb.co/vH5JTXd/first.png
 https://i.ibb.co/rthRPcg/1.jpg
-https://i.ibb.co/THJWmKz/65.jpg
 https://i.ibb.co/gF7tNvH/evil.jpg
-https://i.ibb.co/HGjmN4R/41.jpg
-https://i.ibb.co/XYKB8Y6/52.jpg
+
+
+
+স্যার আমি বিদ্যুৎ এর কারনে পিছিয়ে গেছি। আমার Assignment তাই একটু লেট হয়ে গিয়েছে। আমি আমার Assignment সম্পূর্ন শেষ হওয়ার আগেই ৬০ মার্কের শেষ দিনে Assignment Submit করে দিয়েছিলাম এবং আপডেট করতেছিলাম , কোড পুশ করতেছিলাম । আমার টার্গেট ছিল আমি ৫০ মার্কের শেষ দিন পর্যন্ত অর্থাৎ ২৩-০৫-২০২৩ কোড পুশ করে যাবো । যাতে শর্ত অনুযায়ি আমার ৫০ মার্ক count হয়। 
+
+কিন্তু দূভাগ্যবসত এই বার আমার ৬০ মার্কের ডেড লাইনের পরের দিনি Result চলে আসছে। আমার Assignment তখনো সম্পূর্ন হয় নি । তাই আমাকে ০ দেওয়া হয়েছে। 
+
+আমি আজেক ২৩-০৫-২৩ আমার Resubmit করলাম । এই স্যার আজেক তারিখ অনুযায়ি ৫০ এ মার্ক্স count  হওয়ার কথা । তাই আমার আমার Assignment টি ৫০ মার্কে বিবেচনা করার জন্য অনুরোধ করছি। বিষয় টি বিবেচনা করে দেখবেন একটু । 
