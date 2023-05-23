@@ -1,0 +1,52 @@
+[
+    {
+      "toy_name": "Disney Princess Cinderella Doll",
+      "image_url": "https://example.com/toys/cinderella_doll.jpg",
+      "seller_name": "Magical Toys",
+      "seller_email": "magicaltoys@example.com",
+      "toy_category": "Dolls",
+      "toy_subcategory": "Disney",
+      "price": 24.99,
+      "rating": 4.6,
+      "quantity": 12,
+      "toy_details": "Bring the enchantment of Disney's Cinderella to life with this beautiful Cinderella doll. Dressed in her iconic blue ball gown, she is ready to attend the royal ball. With her stunning features and removable glass slippers, this doll is a must-have for any Disney Princess fan."
+    },
+    {
+      "toy_name": "Disney Frozen Elsa and Anna Doll Set",
+      "image_url": "https://example.com/toys/frozen_doll_set.jpg",
+      "seller_name": "Snowflake Toys",
+      "seller_email": "snowflaketoys@example.com",
+      "toy_category": "Dolls",
+      "toy_subcategory": "Disney",
+      "price": 39.99,
+      "rating": 4.9,
+      "quantity": 6,
+      "toy_details": "Embark on a magical adventure with Elsa and Anna from Disney's Frozen. This doll set includes both sisters dressed in their beautiful outfits inspired by the movie. With their poseable arms and intricate details, these dolls are perfect for recreating your favorite Frozen moments."
+    },
+    {
+      "toy_name": "Disney Princess Belle Singing Doll",
+      "image_url": "https://example.com/toys/belle_singing_doll.jpg",
+      "seller_name": "Enchanted Toys",
+      "seller_email": "enchantedtoys@example.com",
+      "toy_category": "Dolls",
+      "toy_subcategory": "Disney",
+      "price": 29.99,
+      "rating": 4.7,
+      "quantity": 10,
+      "toy_details": "Experience the magic of Disney's Beauty and the Beast with this singing Belle doll. With a touch of a button, Belle sings her iconic songs from the movie. Dressed in her signature yellow gown, she is ready to dance and sing along with you."
+    },
+    {
+      "toy_name": "Disney Princess Belle Singing Doll",
+      "image_url": "https://example.com/toys/belle_singing_doll.jpg",
+      "seller_name": "Enchanted Toys",
+      "seller_email": "enchantedtoys@example.com",
+      "toy_category": "Dolls",
+      "toy_subcategory": "Disney",
+      "price": 29.99,
+      "rating": 4.7,
+      "quantity": 10,
+      "toy_details": "Experience the magic of Disney's Beauty and the Beast with this singing Belle doll. With a touch of a button, Belle sings her iconic songs from the movie. Dressed in her signature yellow gown, she is ready to dance and sing along with you."
+    }
+    
+  ]
+  

@@ -17,7 +17,6 @@ const AddAToy = () => {
     const form = event.target;
     const photo = form.photo.value;
     const toyName = form.toyName.value;
-    const category = form.category.value;
     const subCategory = form.subCategory.value;
     const quantity = form.quantity.value;
     const seller = form.seller.value;
@@ -29,7 +28,6 @@ const AddAToy = () => {
     const newToy = {
       photo,
       toyName,
-      category,
       subCategory,
       quantity,
       seller,
@@ -54,7 +52,13 @@ const AddAToy = () => {
       <div className="lg:w-10/12 mx-auto">
 
         <form onSubmit={handleAddToy}>
-          <div className="form-control mb-3">
+          
+
+          {/* -----------From Data input ----------- */}
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* ------------First Container------------- */}
+            <div className="md:w-1/2">
+            <div className="form-control mb-3">
             <label className="label">
               <span className="label-text">Toy Image URL</span>
             </label>
@@ -68,11 +72,6 @@ const AddAToy = () => {
               />
             </label>
           </div>
-
-          {/* -----------From Data input ----------- */}
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* ------------First Container------------- */}
-            <div className="md:w-1/2">
               <div className="form-control mb-3">
                 <label className="label">
                   <span className="label-text">Toy Name</span>
@@ -88,18 +87,6 @@ const AddAToy = () => {
                 </label>
               </div>
 
-              <div className="form-control mb-3">
-                <label className="label">
-                  <span className="label-text">Select Category</span>
-                </label>
-                <label className="input-group rounded-s ">
-                <select className="select select-bordered w-full " required name="category">
-               
-                <option>Han Solo</option>
-                <option>Greedo</option>
-              </select>
-                </label>
-              </div>
 
               <div className="form-control mb-3">
                 <label className="label">
@@ -108,8 +95,9 @@ const AddAToy = () => {
                 <label className="input-group rounded-s ">
                 <select className="select select-bordered w-full" required name="subCategory">
                
-                <option>Han Solo</option>
-                <option>Greedo</option>
+                <option>Disney princes</option>
+                <option>Disney Queen</option>
+                <option>Evil Queen</option>
               </select>
                 </label>
               </div>
