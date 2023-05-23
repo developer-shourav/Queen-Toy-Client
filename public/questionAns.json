@@ -1,0 +1,22 @@
+[
+    {
+      "question": "What is an access token and refresh token? How do they work and where should we store them on the client-side?",
+      "ans": "Access tokens and refresh tokens are commonly used in authentication and authorization systems.  *An access token is a credential that is used to access protected resources, such as APIs or specific routes on a server. It is typically short-lived and expires after a certain period of time. Access tokens are issued to authenticated users after they successfully log in or authenticate with the server. They are included in API requests as a means of proving the user's identity and permissions. *A refresh token is a long-lived credential used to obtain a new access token when the current one expires. It is typically issued alongside an access token during the initial authentication process. Refresh tokens are not sent with each API request; instead, they are securely stored and sent to the server only when requesting a new access token. The server verifies the refresh token and issues a fresh access token in return."
+    },
+  
+    {
+      "question": "Compare SQL and NoSQL databases.",
+      "ans": "SQL databases are best suited for applications requiring strict data integrity, complex relationships, and transactions. NoSQL databases excel in handling large-scale, rapidly evolving applications that prioritize scalability and flexibility over strict consistency. The choice between SQL and NoSQL depends on the specific requirements of your application, such as data structure, scalability needs, and development agility."
+    },
+  
+    {
+      "question": "What is express js? What is Nest JS?",
+      "ans": "Express.js and NestJS are both popular web application frameworks used for building server-side applications. Express.js is a minimalist, unopinionated framework for building web applications, while NestJS is an opinionated framework that brings the benefits of TypeScript and follows a modular architecture inspired by Angular. The choice between them depends on our preferences, project requirements, and familiarity with TypeScript and Angular concepts."
+    },
+  
+    {
+      "question": "What is MongoDB aggregate and how does it work ?",
+      "ans": "In MongoDB, the aggregate method is used to perform advanced data aggregation operations on collections. It allows you to process and transform data, perform calculations, and retrieve aggregated results based on specified criteria. The aggregate method utilizes a pipeline approach, where multiple stages are defined to manipulate and reshape the data."
+    }
+  ]
+  

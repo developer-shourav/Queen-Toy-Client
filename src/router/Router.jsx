@@ -7,7 +7,7 @@ import Register from "../pages/Register/Register";
 import AllToys from "../pages/AllToys/AllToys";
 import MyToys from "../pages/MyToys/MyToys";
 import AddAToy from "../pages/AddAToy/AddAToy";
-import Blog from "../pages/Blog/Blog";
+import Blogs from "../pages/Blogs/Blogs";
 import PrivetRoutes from "./PrivetRoutes";
 
 
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
             
             {
                 path:'/blog',
-                element:<Blog> </Blog>
+                element:<Blogs> </Blogs>
             },
             
 
