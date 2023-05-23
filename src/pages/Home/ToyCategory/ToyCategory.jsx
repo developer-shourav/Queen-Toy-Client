@@ -33,10 +33,10 @@ const ToyCategory = () => {
         {/* ---------- Toy Categories ---------- */}
 
         {/* -------- Tab Section ------- */}
-        <div className=" text-center font-bold space-x-3  mt-10">
+        <div className=" text-center font-bold space-x-1 md:space-x-3 space-y-2  md:mt-10">
           <button
             onClick={handleAllToy}
-            className={`btn rounded-full px-10 text-black bg-white hover:bg-pink-600 hover:text-white ${
+            className={`btn  rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
               tab == "all" ? "bg-pink-500 text-white" : ""
             }`}
           >
@@ -45,7 +45,7 @@ const ToyCategory = () => {
 
           <button
             onClick={handleQueensToy}
-            className={`btn rounded-full px-10 text-black bg-white hover:bg-pink-600 hover:text-white ${
+            className={`btn rounded-full  md:px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
               tab == "queens" ? "bg-pink-500 text-white" : ""
             }`}
           >
@@ -54,7 +54,7 @@ const ToyCategory = () => {
 
           <button
             onClick={handleEvilsToy}
-            className={`btn rounded-full px-10 text-black bg-white hover:bg-pink-600 hover:text-white ${
+            className={`btn rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
               tab == "evils" ? "bg-pink-500 text-white" : ""
             }`}
           >
@@ -63,7 +63,7 @@ const ToyCategory = () => {
 
           <button
             onClick={handlePrincesToy}
-            className={`btn rounded-full px-10 text-black bg-white hover:bg-pink-600 hover:text-white ${
+            className={`btn rounded-full px-6 text-black bg-white hover:bg-pink-600 hover:text-white ${
               tab == "princes" ? "bg-pink-500 text-white" : ""
             }`}
           >
