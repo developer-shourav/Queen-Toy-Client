@@ -19,7 +19,7 @@ import Logo from "../../assets/images/logo/logo-medium.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#202226]  py-16 mt-60 text-white">
+    <div className="bg-[#202226] z-50  py-16 mt-60 text-white">
       <div className="container mx-auto px-5">
         <div className=" lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 ">
           <div>
