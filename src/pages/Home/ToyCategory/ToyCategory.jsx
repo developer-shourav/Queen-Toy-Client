@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BorderB from "../../../assets/images/border-img/borderB.svg";
 import ToyCard from "./ToyCard";
+
 const ToyCategory = () => {
   const [tabStyle, setTabStyle] = useState("all");
   const [toysData, setToysData] = useState([]);

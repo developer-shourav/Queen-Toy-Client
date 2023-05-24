@@ -1,8 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DataRow = ({toy}) => {
     const {_id, price, toyName, photo, quantity, seller, subCategory } = toy;
-    console.log(toy);
+    const showInfo = () => {
+      Swal.fire(
+        'You are not logged in',
+        'You have to log in first to view details',
+        'warning'
+      )
+    }
   return (
     <tr>
       <td>
@@ -22,9 +30,7 @@ const DataRow = ({toy}) => {
       <td>{subCategory}</td>
       <td>{quantity}</td>
       <th>
-        <button className="btn bg-pink-500 hover:bg-cyan-600 font-bold btn-sm border-0 ">
-          View details
-        </button>
+        <Link className="btn bg-pink-500 hover:bg-cyan-600 font-bold btn-sm border-0 " onClick={showInfo}  to={`/toyDetails/${_id}`}>View Details</Link>
       </th>
     </tr>
   );
