@@ -7,13 +7,12 @@ const ToyCard = ({toy}) => {
       <figure>
         <img
           src={photo}
-          className="h-40"
+          className=" h-48"
           alt="Toy image"
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{toyName}</h2>
-        <p>{toyName}</p>
+        <h2 className="">{toyName}</h2>
        
       </div>
     </div>

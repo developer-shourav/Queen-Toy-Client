@@ -36,7 +36,7 @@ const ToyCategory = () => {
   };
 
   useEffect( () => {
-    fetch('http://localhost:5000/toys')
+     fetch('https://queen-toy-server-developer-shourav.vercel.app/toys')
     .then( res => res.json())
     .then( data => setToysData(data))
   }, [dataReloader])
@@ -98,7 +98,7 @@ const ToyCategory = () => {
         </div>
 
         {/* ----------------Toys Card------------------- */}
-        <div className=" mx-3  md:mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-16">
+        <div className=" mx-3  md:mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-16">
 
           { dataReloader && 
             filteredData.map ( toy => <ToyCard

@@ -7,7 +7,7 @@ const Blog = () => {
 
 
     useEffect( ( ) => {
-        fetch('questionAns.json')
+        fetch('https://queen-toy-server-developer-shourav.vercel.app/blogs')
         .then( res => res.json())
         .then( data => setQuestions(data))
     },[ ])
@@ -16,7 +16,7 @@ const Blog = () => {
         <div className='grid grid-cols-1 gap-4'>
             
             {
-                questions?.map( questionItem => <SingleQuestion questionData = {questionItem} key ={questionItem?.question}> </SingleQuestion>)
+                questions?.map( questionItem => <SingleQuestion questionData = {questionItem} key ={questionItem._id}> </SingleQuestion>)
             }
         </div>
     );
