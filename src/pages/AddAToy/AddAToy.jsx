@@ -3,7 +3,7 @@ import useTitle from "../../Hooks/useTitle";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import { AuthContext } from "../../providers/AuthProviders";
 import { ScrollRestoration } from "react-router-dom";
-
+import Swal from "sweetalert2";
 const AddAToy = () => {
   /* -----------Dynamic Title------------- */
   useTitle("Add A Toy");
@@ -37,7 +37,28 @@ const AddAToy = () => {
       details
     };
    
-    console.log(newToy);
+   // Send Data to the server
+
+   fetch('https://queen-toy-server-developer-shourav.vercel.app/addAToy', {
+    method:'POST',
+    headers: {
+        'content-type':'application/json'
+    },
+    body: JSON.stringify(newToy)
+ })
+ .then( res => res.json())
+ .then( data => {
+    if(data?.acknowledged){
+        Swal.fire(
+            'Good job!',
+            'Your Toy Added Successfully!',
+            'success'
+          )
+        form.reset()
+    }
+    
+ })
+    
   }
 
   

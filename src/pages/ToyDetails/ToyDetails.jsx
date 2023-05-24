@@ -11,7 +11,6 @@ const ToyDetails = () => {
     
     const toyData = useLoaderData();
     const { price, toyName, photo, quantity, seller, rating, sellerEmail, details, subCategory } = toyData;
-    console.log(toyData);
     return (
         <div className='container mx-auto px-5 mt-10'>
            <div className='flex flex-col md:flex-row  gap-12  '>
