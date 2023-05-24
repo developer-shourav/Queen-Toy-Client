@@ -46,6 +46,7 @@ const AddAToy = () => {
     },
     body: JSON.stringify(newToy)
  })
+ 
  .then( res => res.json())
  .then( data => {
     if(data?.acknowledged){

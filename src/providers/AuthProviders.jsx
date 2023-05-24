@@ -12,6 +12,7 @@ const AuthProviders = ({children}) => {
     
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [reloader, setReloader] = useState(false);
 
      /* ------- Email password Login -------------- */
     const createEmailPassUser = ( email, password) => {
@@ -57,11 +58,13 @@ const AuthProviders = ({children}) => {
     const authInfo = {
         user,
         loading,
+        reloader,
         createEmailPassUser,
         signInUserWithEmail,
         registerWithGoogle,
         registerWithGitHub, 
         logOut,
+        setReloader,
     }
 
     return (

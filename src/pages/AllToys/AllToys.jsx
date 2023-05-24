@@ -18,7 +18,7 @@ const AllToys = () => {
           <thead className="font-extrabold ">
             <tr className="">
              
-              <th className=" text-[16px]">Toy Name</th>
+              <th className=" text-[16px]">Toy Name & Image</th>
               <th className=" text-[16px]">Seller</th>
               <th className=" text-[16px]">Price</th>
               <th className=" text-[16px]">Sub-Category</th>

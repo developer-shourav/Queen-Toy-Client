@@ -1,20 +1,51 @@
-import React from 'react';
-import useTitle from '../../Hooks/useTitle';
-import { ScrollRestoration } from 'react-router-dom';
+import React from "react";
+import useTitle from "../../Hooks/useTitle";
+import { ScrollRestoration } from "react-router-dom";
+import MyDataRow from "./MyDataRow";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
+
 
 const MyToys = () => {
-    useTitle('My Toys')
-    return (
-        <div>
-            <h2>This is My Toys</h2>
+    /* --------Dynamic Title hook------ */
+  useTitle("My Toys");
+   /* ----------Get Data Form Context API-----*/
+   const {user, reloader} = useContext(AuthContext);
 
-            <div>
-                
-            </div>
 
-            <ScrollRestoration />
-        </div>
-    );
+
+   console.log(user);
+  return (
+    <div>
+      <h2 className=" text-3xl md:text-4xl text-center my-10  font-bold">
+        My Toys
+      </h2>
+
+      <div className="overflow-x-auto w-full  px-5">
+        <table className="table w-full ">
+          {/* head */}
+          <thead className="font-extrabold ">
+            <tr className="">
+              <th className=" text-[16px]">Toy Name & Image</th>
+              <th className=" text-[16px]">Price</th>
+              <th className=" text-[16px]">Sub-Category</th>
+              <th className=" text-[16px]"> Quantity</th>
+              <th className=" text-[16px]"> Update</th>
+              <th className=" text-[16px]"> Delete</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+
+            {/* --------show data -------------- */}
+            <MyDataRow> </MyDataRow>
+          </tbody>
+        </table>
+      </div>
+      <ScrollRestoration />
+    </div>
+  );
 };
 
 export default MyToys;
