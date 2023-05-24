@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useTitle from "../../Hooks/useTitle";
 import { ScrollRestoration } from "react-router-dom";
 import MyDataRow from "./MyDataRow";
@@ -11,10 +11,17 @@ const MyToys = () => {
   useTitle("My Toys");
    /* ----------Get Data Form Context API-----*/
    const {user, reloader} = useContext(AuthContext);
+   const [myToys, setMyToys] = useState([]);
+
+
+   useEffect(() => {
+    fetch(`https://queen-toy-server-developer-shourav.vercel.app/myToys?email=${user?.email}`)
+    .then( res => res.json())
+    .then(data => setMyToys(data))
+   }, [reloader])
 
 
 
-   console.log(user);
   return (
     <div>
       <h2 className=" text-3xl md:text-4xl text-center my-10  font-bold">
@@ -39,7 +46,14 @@ const MyToys = () => {
             {/* row 1 */}
 
             {/* --------show data -------------- */}
-            <MyDataRow> </MyDataRow>
+
+            {
+                myToys?.map( toyData => <MyDataRow
+                key={toyData._id}
+                toyData={toyData}
+                > </MyDataRow>)
+            }
+            
           </tbody>
         </table>
       </div>
