@@ -19,8 +19,8 @@ html{
 }
 /* width */
 ::-webkit-scrollbar {
-    width:12px;
-    z-index: 15;
+    width:10px;
+    
   }
   
   /* Track */
@@ -32,20 +32,20 @@ html{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ff4281;
+    background-color: #f7729e;
     border-radius: 10px;
     
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #cc0044;
+    background: #ff266e;
     
   }
   
 ::selection {
     color: #fff;
-    background-color: #fc4e88;
+    background-color: #ff6195;
   }
 /* ------------Color Template ------------------ */
 
