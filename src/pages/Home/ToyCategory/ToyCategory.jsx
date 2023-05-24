@@ -42,7 +42,6 @@ const ToyCategory = () => {
     .then( data => setToysData(data))
   }, [dataReloader])
 
-  console.log(toysData);
 
   return (
     <div id="toys">

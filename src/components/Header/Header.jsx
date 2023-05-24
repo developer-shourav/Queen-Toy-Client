@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+
 
   const handleLogOut = () => {
     Swal.fire({
@@ -21,7 +21,7 @@ const Header = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         logOut()
-          .the((result) => {})
+          .then((result) => {})
           .catch((error) => {
             console.log(error);
           });
@@ -67,30 +67,30 @@ const Header = () => {
                   </NavLink>
                 </li>
 
-               {
-                user &&  <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-[#ff6799] bg-transparent" : ""
-                  }
-                  to="/my_toys"
-                >
-                  My Toys
-                </NavLink>
-              </li>
-               }
-                {
-                  user && <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive ? "text-[#ff6799] bg-transparent" : ""
-                    }
-                    to="/add_a_toy"
-                  >
-                    Add A Toy
-                  </NavLink>
-                </li>
-                }
+                {user && (
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? "text-[#ff6799] bg-transparent" : ""
+                      }
+                      to="/my_toys"
+                    >
+                      My Toys
+                    </NavLink>
+                  </li>
+                )}
+                {user && (
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? "text-[#ff6799] bg-transparent" : ""
+                      }
+                      to="/add_a_toy"
+                    >
+                      Add A Toy
+                    </NavLink>
+                  </li>
+                )}
                 <li>
                   <NavLink
                     className={({ isActive }) =>
@@ -201,34 +201,34 @@ const Header = () => {
                   </NavLink>
                 </li>
 
-                {
-                  user && <li>
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-[#ff6799] bg-transparent"
-                        : "text-[#4acdd5]"
-                    }
-                    to="/my_toys"
-                  >
-                    My Toys
-                  </NavLink>
-                </li>
-                }
-               {
-                user &&  <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-[#ff6799] bg-transparent"
-                      : "text-[#4acdd5]"
-                  }
-                  to="/add_a_toy"
-                >
-                  Add A Toy
-                </NavLink>
-              </li>
-               }
+                {user && (
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive
+                          ? "text-[#ff6799] bg-transparent"
+                          : "text-[#4acdd5]"
+                      }
+                      to="/my_toys"
+                    >
+                      My Toys
+                    </NavLink>
+                  </li>
+                )}
+                {user && (
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive
+                          ? "text-[#ff6799] bg-transparent"
+                          : "text-[#4acdd5]"
+                      }
+                      to="/add_a_toy"
+                    >
+                      Add A Toy
+                    </NavLink>
+                  </li>
+                )}
                 <li>
                   <NavLink
                     className={({ isActive }) =>
@@ -256,7 +256,10 @@ const Header = () => {
                 </li>
 
                 {user ? (
-                  <li onClick={handleLogOut} className="text-center bg-[#fff047] rounded">
+                  <li
+                    onClick={handleLogOut}
+                    className="text-center bg-[#fff047] rounded"
+                  >
                     <button className="py-3 text-black mx-auto shadow-md  px-5  uppercase">
                       Log Out
                     </button>

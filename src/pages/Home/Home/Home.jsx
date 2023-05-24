@@ -68,7 +68,6 @@ const Home = () => {
 
 
 
-
       {/* ==========Offer Poster Section===========*/}
       <SellPoster> </SellPoster>
       <ScrollRestoration />
