@@ -1,7 +1,8 @@
 import React from "react";
-
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 const ToyCard = ({toy}) => {
-    const {toyName, photo, subCategory} = toy ;
+    const {toyName, photo, subCategory, price, rating} = toy ;
   return (
     <div className="card card-compact w-full  mx-auto bg-base-100 box-shadow">
       <figure>
@@ -12,7 +13,12 @@ const ToyCard = ({toy}) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="">{toyName}</h2>
+      <div className='flex items-center'> <Rating style={{ maxWidth: 90 }} value={rating} readOnly /> <span className='ms-2 mt-1 font-bold  text-gray-600'>{rating}</span></div>
+        <h2 className="text-[16px] font-bold">{toyName}</h2>
+        <div className="flex justify-between items-center">
+         <h2 className="text-lg font-bold">${price}</h2>
+         <button className="btn btn-sm normal-case border-0 bg-pink-500 text-bold text-white px-3 py-1 rounded hover:bg-pink-700">View Details</button>
+        </div>
        
       </div>
     </div>
