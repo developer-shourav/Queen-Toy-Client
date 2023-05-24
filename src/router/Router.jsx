@@ -51,7 +51,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/toyDetails/:id',
-                element:<PrivetRoutes> <ToyDetails> </ToyDetails></PrivetRoutes>
+                element:<PrivetRoutes> <ToyDetails> </ToyDetails></PrivetRoutes>,
+                loader : ({params}) => fetch(`https://queen-toy-server-developer-shourav.vercel.app/toyDetails/${params.id}`)
             },
             
             {

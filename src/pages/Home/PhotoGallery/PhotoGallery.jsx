@@ -5,10 +5,6 @@ const PhotoGallery = () => {
     const image2 = 'https://live.staticflickr.com/4184/34672508212_c570079b45_b.jpg';
     const image3 = 'https://m.media-amazon.com/images/I/61sTdh33YZL._SX425_.jpg';
     const image4 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460022220242?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
-    const image5 = 'https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd4e08d65/images/24D1A8FB_3.jpg?sw=767&sh=767&sm=fit';
-    const image6 = 'https://m.media-amazon.com/images/I/71e5Yd+YzML._AC_UF894,1000_QL80_.jpg';
-    const image7 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460011777498?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
-    const image8 = 'https://www.youloveit.com/uploads/posts/2022-02/1645172227_youloveit_com_disney_style_series_princess_jasmine.jpg';
     const image9 = 'https://m.media-amazon.com/images/I/71fgaDOy8kS._AC_UF894,1000_QL80_.jpg';
     const image10 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460033511124-2?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
     const image11 = 'https://5.imimg.com/data5/EK/LW/NY/SELLER-6479327/jasmine-disney-princess-figurine-500x500.jpg';
@@ -20,33 +16,22 @@ const PhotoGallery = () => {
 
     return (
         <div className='overflow-hidden'>
-           <div className='grid grid-cols-3 lg:grid-cols-4 gap-8 px-5 gallery mt-10'>
+           <div className='grid grid-cols-3 lg:grid-cols-4 gap-10 px-5 gallery mt-10'>
             <div >
-                <img src={image1}  alt="" />
+                <img src={image9}  alt="" />
             </div>
             <div className=''>
-                <img src={image2} alt="" />
+                <img src={image4} alt="" />
             </div>
             <div>
                 <img src={image3} alt="" />
             </div>
             <div>
-                <img src={image4} alt="" />
+                <img src={image12} alt="" />
             </div>
+           
             <div>
-                <img src={image5} alt="" />
-            </div>
-            <div>
-                <img src={image6} alt="" />
-            </div>
-            <div>
-                <img src={image7} alt="" />
-            </div>
-            <div>
-                <img src={image8} alt="" />
-            </div>
-            <div>
-                <img src={image9} alt="" />
+                <img src={image1} alt="" />
             </div>
             <div>
                 <img src={image10} alt="" />
@@ -55,7 +40,7 @@ const PhotoGallery = () => {
                 <img src={image11} alt="" />
             </div>
             <div>
-                <img src={image12} alt="" />
+                <img src={image2} alt="" />
             </div>
             <div>
                 <img src={image13} alt="" />
