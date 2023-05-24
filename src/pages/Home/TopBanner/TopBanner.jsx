@@ -38,9 +38,11 @@ const TopBanner = () => {
           We have all kinds of Disney doll toys. You will get exactly what you want and what you are looking for. We always provide the best product to our customers. You are in the right place for choices the best.
           </p>
 
+          <a href="#toys">
           <button className="btn rounded  bg-[#fd598f] shadow-md shadow-[#993153] border-0  hover:bg-pink-700 ">
             Buy Toys
           </button>
+          </a>
         </div>
       </div>
 
@@ -57,9 +59,11 @@ const TopBanner = () => {
           We have all kinds of Disney doll toys. You will get exactly what you want and what you are looking for. We always provide the best product to our customers. You are in the right place for choices the best.
           </p>
 
+          <a href="#gallery">
           <button className="btn rounded bg-[#0ec3cc] shadow-md shadow-[#266e72] border-0 hover:bg-cyan-700">
           See Gallery
           </button>
+          </a>
         </div>
 
         <div className="md:w-1/2 ">

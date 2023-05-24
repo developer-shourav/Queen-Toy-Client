@@ -44,10 +44,10 @@ const ToyCategory = () => {
   console.log(toysData);
 
   return (
-    <div>
-      <div className=" mt-16 md:mt-20 lg:mt-40 ">
+    <div id="toys">
+      <div  className=" mt-16 md:mt-20 lg:mt-40 ">
         {/* ----------Heading Style--------- */}
-        <h2 className=" text-2xl md:text-3xl lg:text-4xl text-center font-bold">
+        <h2  className=" text-2xl md:text-3xl lg:text-4xl text-center font-bold">
           Shop By Categories
         </h2>
         <img

@@ -17,9 +17,9 @@ const Home = () => {
       <TopBanner> </TopBanner>
 
       {/* -----------Photo Gallery Section---------- */}
-      <div className=" mt-16 md:mt-20 lg:mt-28 ">
+      <div id="gallery" className=" mt-16 md:mt-20 lg:mt-28 ">
         {/* ----------Heading Style--------- */}
-        <h2 className=" text-2xl md:text-3xl lg:text-4xl text-center font-bold">
+        <h2  className=" text-2xl md:text-3xl lg:text-4xl text-center font-bold">
           Our Gallery
         </h2>
         <img

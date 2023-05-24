@@ -37,7 +37,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/all_toys',
-                element:<AllToys> </AllToys>
+                element:<AllToys> </AllToys>,
+                loader : () => fetch('https://queen-toy-server-developer-shourav.vercel.app/allToys')
             },
             {
                 path:'/my_toys',
