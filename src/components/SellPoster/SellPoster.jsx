@@ -1,9 +1,21 @@
 import React from "react";
 import AddImg from '../../assets/images/add-img/add-group.png';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const SellPoster = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease',
+      delay: 1,
+      once: false,
+      mirror: false,
+    });
+  }, []);
   return (
-    <div className=" my-20 mx-3 lg:mx-0 lg:my-36  gap-5 flex flex-col-reverse md:flex-row  font-bold uppercase text-center bg-[#ff6799] shadow-xl rounded-xl ">
+    <div data-aos="fade-up" data-aos-once="false" className="  my-20 mx-3 lg:mx-0 lg:my-36  gap-5 flex flex-col-reverse md:flex-row  font-bold uppercase text-center bg-[#ff6799] shadow-xl rounded-xl ">
      
         <div>
             <img src={AddImg} className="drop-shadow-2xl shadow-black" alt="" />

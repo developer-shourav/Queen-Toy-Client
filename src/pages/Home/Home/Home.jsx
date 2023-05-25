@@ -8,16 +8,20 @@ import OurServices from "../../../components/OurServices/OurServices";
 import SellPoster from "../../../components/SellPoster/SellPoster";
 import { ScrollRestoration } from "react-router-dom";
 import ToyCategory from "../ToyCategory/ToyCategory";
+
+
 const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Home");
+ 
   return (
     <div className="container mx-auto pb-32">
+  
       {/* -----------Top Banner Section---------- */}
       <TopBanner> </TopBanner>
 
       {/* -----------Photo Gallery Section---------- */}
-      <div id="gallery" className=" mt-16 md:mt-20 lg:mt-28 ">
+      <div  id="gallery" className=" mt-16 md:mt-20 lg:mt-28 ">
         {/* ----------Heading Style--------- */}
         <h2  className=" text-2xl md:text-3xl lg:text-4xl text-center font-bold">
           Our Gallery
@@ -29,7 +33,7 @@ const Home = () => {
         />
 
         {/* ----------Gallery ---------- */}
-        <PhotoGallery> </PhotoGallery>
+        <PhotoGallery > </PhotoGallery>
       </div>
 
       {/* -----------Brands Section---------- */}

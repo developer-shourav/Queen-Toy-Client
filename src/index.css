@@ -11,7 +11,8 @@
 
 body{
     font-family: 'Nunito', sans-serif;
-    
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html{
