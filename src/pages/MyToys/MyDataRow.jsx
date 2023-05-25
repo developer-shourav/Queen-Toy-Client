@@ -1,11 +1,44 @@
-import React, { useContext } from "react";
+import React from "react";
 import {ImBin} from 'react-icons/im';
 import {GoPencil} from 'react-icons/go';
-import { AuthContext } from "../../providers/AuthProviders";
- 
-const MyDataRow = ({toyData}) => {
- const {setReloader, reloader} = useContext(AuthContext);
+import Swal from "sweetalert2";
+
+const MyDataRow = ({toyData, loadRemaining}) => {
  const {_id, toyName, photo, price, subCategory, quantity} = toyData;
+
+ const handleDelete = () => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "Want to Delete this Toy?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#007700",
+    confirmButtonText: "Yes, Delete",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      
+      fetch(`https://queen-toy-server-developer-shourav.vercel.app/toy/${_id}`, {
+        method:'DELETE'
+      })
+      .then( res => res.json())
+      .then (data => {
+        if(data.deletedCount > 0){
+          loadRemaining()
+          Swal.fire({
+            title: "Done !",
+            text: "Toy Delete successful",
+            icon: "success",
+          });
+        }
+      })
+      
+    }
+  });
+
+ }
+
+
   return (
     <tr>
       <td>
@@ -27,12 +60,12 @@ const MyDataRow = ({toyData}) => {
       <td>{subCategory}</td>
       <td>{quantity}</td>
       <th>
-        <button className="btn bg-green-950 hover:bg-green-900 border-0">
+        <button className="btn bg-green-900 hover:bg-green-950 border-0">
           <GoPencil className="text-lg -mt-1 me-1" /> Update
         </button>
       </th>
       <th>
-        <button  className="btn bg-[#ff0627] hover:bg-red-700 border-0 ">
+        <button onClick={handleDelete}  className="btn bg-[#ff0627] hover:bg-red-700 border-0 ">
           {" "}
           <ImBin className="text-lg -mt-1 me-1" /> Delete
         </button>

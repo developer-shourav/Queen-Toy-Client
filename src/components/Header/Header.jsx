@@ -15,8 +15,8 @@ const Header = () => {
       text: "You Want to logout!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#00a9a9",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#d33",
+    cancelButtonColor: "#007700",
       confirmButtonText: "Yes, Logout",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -25,7 +25,11 @@ const Header = () => {
           .catch((error) => {
             console.log(error);
           });
-        Swal.fire("Logout Successful");
+          Swal.fire({
+            title: "Done !",
+            text: "Log out successful",
+            icon: "success",
+          });
       }
     });
   };

@@ -10,16 +10,20 @@ const MyToys = () => {
     /* --------Dynamic Title hook------ */
   useTitle("My Toys");
    /* ----------Get Data Form Context API-----*/
-   const {user, reloader} = useContext(AuthContext);
+   const {user} = useContext(AuthContext);
    const [myToys, setMyToys] = useState([]);
-
-
+   const [dataReloader, setDataReloader] = useState(false);
+   
+   const loadRemaining = () => {
+    setDataReloader(!dataReloader)
+   }
+   
    useEffect(() => {
     fetch(`https://queen-toy-server-developer-shourav.vercel.app/myToys?email=${user?.email}`)
     .then( res => res.json())
     .then(data => setMyToys(data))
-   }, [reloader])
-
+   }, [dataReloader])
+  
 
 
   return (
@@ -51,6 +55,7 @@ const MyToys = () => {
                 myToys?.map( toyData => <MyDataRow
                 key={toyData._id}
                 toyData={toyData}
+                loadRemaining={loadRemaining}
                 > </MyDataRow>)
             }
             
