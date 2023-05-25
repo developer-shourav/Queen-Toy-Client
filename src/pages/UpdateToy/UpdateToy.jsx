@@ -2,12 +2,12 @@ import React from "react";
 import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
 import { AiOutlineCloudUpload } from "react-icons/ai";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
   /* -------Dynamic Title hook----- */
   useTitle("Update Toy");
   const toyData = useLoaderData();
-
   const handleUpdateToy = (event) => {
     /* ---------For Preventing default reload----------- */
     event.preventDefault()
@@ -22,6 +22,26 @@ const UpdateToy = () => {
         quantity,
         details
     };
+
+    fetch(`https://queen-toy-server-developer-shourav.vercel.app/updateToy/${toyData?._id}`, {
+        method:'PATCH',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(updatedToy)
+    })
+    .then( res => res.json())
+    .then( data => {
+        if(data?.modifiedCount){
+            Swal.fire(
+                'Awesome!',
+                'Toy Update Successful',
+                'success'
+              )
+        }
+    })
+
+    
   }
 
   return (
@@ -51,7 +71,6 @@ const UpdateToy = () => {
                 <label className="input-group ">
                   <input
                     type="number"
-                    min="1"
                     placeholder="Price ($)"
                     className="input input-bordered  w-full"
                     name="price"
@@ -68,7 +87,6 @@ const UpdateToy = () => {
                 <label className="input-group ">
                   <input
                     type="number"
-                    min="1"
                     placeholder="Product Quantity"
                     className="input input-bordered  w-full"
                     name="quantity"
