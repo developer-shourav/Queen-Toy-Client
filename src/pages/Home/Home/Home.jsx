@@ -12,7 +12,7 @@ const Home = () => {
   /* -------------Dynamic Title Adding hook---------- */
   useTitle("Home");
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto pb-32">
       {/* -----------Top Banner Section---------- */}
       <TopBanner> </TopBanner>
 

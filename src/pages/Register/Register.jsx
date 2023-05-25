@@ -81,8 +81,8 @@ const Register = () => {
     registerWithGoogle()
     .then( result => {
       const loggedInUser = result.user;
-      registerSuccessAlt()
       navigate(redirectLocation)
+      registerSuccessAlt()
       
     })
     .catch( error =>{
@@ -95,8 +95,8 @@ const Register = () => {
     registerWithGitHub()
     .then( result => {
       const loggedInUser = result.user;
-      registerSuccessAlt()
       navigate(redirectLocation)
+      registerSuccessAlt()
       
     })
     .catch( error =>{
