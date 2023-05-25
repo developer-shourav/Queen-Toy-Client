@@ -9,7 +9,7 @@ const AllToys = () => {
   /* -------------Fetching all Toys data--------- */
   const toysData = useLoaderData();
   return (
-    <div>
+    <div className="pb-40">
       <h2 className=" text-3xl md:text-4xl text-center my-10  font-bold">All Toys</h2>
 
       <div className="overflow-x-auto w-full  px-5">

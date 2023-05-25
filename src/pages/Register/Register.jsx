@@ -6,6 +6,7 @@ import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
 import { AuthContext } from "../../providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -17,6 +18,15 @@ const Register = () => {
   const location = useLocation();
   const redirectLocation = location?.state?.from?.pathname || '/home';
   const [errorMessage, setErrorMessage] = useState('');
+
+  const registerSuccessAlt = () => {
+    Swal.fire(
+      'Welcome',
+      'Register Successful',
+      'success'
+    )
+  }
+
 
   const handleRegister = (event) => {
     /*----- Reset Error Massage ------- */
@@ -43,6 +53,7 @@ const Register = () => {
     .then((result) => {
       const createdUser = result.user;
       addUserNameAndImage(result.user, name, photo);
+      registerSuccessAlt()
     })
 
     .catch((error) => {
@@ -70,6 +81,7 @@ const Register = () => {
     registerWithGoogle()
     .then( result => {
       const loggedInUser = result.user;
+      registerSuccessAlt()
       navigate(redirectLocation)
       
     })
@@ -83,6 +95,7 @@ const Register = () => {
     registerWithGitHub()
     .then( result => {
       const loggedInUser = result.user;
+      registerSuccessAlt()
       navigate(redirectLocation)
       
     })
@@ -93,7 +106,7 @@ const Register = () => {
 
 
     return (
-        <div className="bg-pink-200  ">
+        <div className="bg-pink-200  pb-20 ">
         <div className="container py-10 md:py-20 mx-auto">
           <div className="w-11/12  lg:w-8/12 bg-white  mx-auto flex flex-col md:flex-row items-center justify-center shadow-xl rounded">
             <div className="w-full hidden md:block md:w-5/12 lg:w-4/12">

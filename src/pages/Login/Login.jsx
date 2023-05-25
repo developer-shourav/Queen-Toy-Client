@@ -5,6 +5,7 @@ import { Link, ScrollRestoration, useLocation, useNavigate } from "react-router-
 import GoogleIcon from '../../assets/images/icons/google.png';
 import {BsGithub} from 'react-icons/bs';
 import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Login = () => {
   /* -------------Dynamic Title Adding hook---------- */
@@ -17,6 +18,14 @@ const Login = () => {
   const redirectLocation = location.state?.from?.pathname || '/home';
 
   const [errorText, setErrorText] = useState('');
+
+  const loginSuccessAlt = () => {
+    Swal.fire(
+      'Welcome',
+      'Login Successful',
+      'success'
+    )
+  }
 
   const handleEmailPassLogIn = event => {
 
@@ -34,6 +43,7 @@ const Login = () => {
     signInUserWithEmail(email, password)
     .then( result => {
       const loggedInUser = result.user;
+      loginSuccessAlt()
       navigate(redirectLocation)
       
     })
@@ -47,6 +57,7 @@ const Login = () => {
     registerWithGoogle()
     .then( result => {
       const loggedInUser = result.user;
+      loginSuccessAlt()
       navigate(redirectLocation)
       
     })
@@ -61,6 +72,7 @@ const Login = () => {
     registerWithGitHub()
     .then( result => {
       const loggedInUser = result.user;
+      loginSuccessAlt()
       navigate(redirectLocation)
       
     })
@@ -70,7 +82,7 @@ const Login = () => {
   }
 
   return (
-    <div className="bg-pink-200  ">
+    <div className="bg-pink-200  pb-20">
       <div className="container py-10 md:py-20 mx-auto">
         <div className="w-11/12  lg:w-8/12 bg-white  mx-auto flex flex-col-reverse md:flex-row items-center justify-center shadow-xl rounded">
           <div className="w-full md:w-6/12 lg:w-5/12">

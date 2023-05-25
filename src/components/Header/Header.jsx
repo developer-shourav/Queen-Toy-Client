@@ -121,7 +121,7 @@ const Header = () => {
                   <li>
                     <span
                       onClick={handleLogOut}
-                      className="py-3 bg-[#fff047] text-black shadow-md rounded-full px-5 uppercase  "
+                      className="py-3 bg-[#fff047] text-black shadow-md rounded-full px-5 uppercase cursor-pointer "
                     >
                       Log Out
                     </span>

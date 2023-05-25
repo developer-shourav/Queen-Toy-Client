@@ -45,7 +45,7 @@ const UpdateToy = () => {
   }
 
   return (
-    <div className="mt-10 container mx-auto px-3">
+    <div className="mt-10 container mx-auto px-3 pb-40">
       <div className="text-center text-2xl md:text-3xl font-bold my-5  flex items-center justify-center gap-3">
         {" "}
         <AiOutlineCloudUpload className="inline-block text-4xl md:text-5xl text-pink-500" />{" "}

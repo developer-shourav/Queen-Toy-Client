@@ -13,7 +13,7 @@ const Blog = () => {
     },[ ])
 
     return (
-        <div className='grid grid-cols-1 gap-4'>
+        <div className='grid grid-cols-1 gap-4 pb-40'>
             
             {
                 questions?.map( questionItem => <SingleQuestion questionData = {questionItem} key ={questionItem._id}> </SingleQuestion>)

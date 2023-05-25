@@ -12,7 +12,7 @@ const ToyDetails = () => {
     const toyData = useLoaderData();
     const { price, toyName, photo, quantity, seller, rating, sellerEmail, details, subCategory } = toyData;
     return (
-        <div className='container mx-auto px-5 mt-10'>
+        <div className='container mx-auto px-5 pb-48 mt-10'>
            <div className='flex flex-col md:flex-row  gap-12  '>
              <div className='md:w-1/2 bg-pink-100 rounded-lg p-10 '>
                 <img className='w-10/12 mx-auto rounded-lg' src={photo} alt="" />

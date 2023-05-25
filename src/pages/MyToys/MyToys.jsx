@@ -27,7 +27,7 @@ const MyToys = () => {
 
 
   return (
-    <div>
+    <div className="pb-40">
       <h2 className=" text-3xl md:text-4xl text-center my-10  font-bold">
         My Toys
       </h2>
