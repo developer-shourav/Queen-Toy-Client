@@ -10,6 +10,7 @@ import AddAToy from "../pages/AddAToy/AddAToy";
 import Blogs from "../pages/Blogs/Blogs";
 import PrivetRoutes from "./PrivetRoutes";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
+import UpdateToy from "../pages/UpdateToy/UpdateToy";
 
 
 
@@ -52,6 +53,12 @@ const router = createBrowserRouter([
             {
                 path:'/toyDetails/:id',
                 element:<PrivetRoutes> <ToyDetails> </ToyDetails></PrivetRoutes>,
+                loader : ({params}) => fetch(`https://queen-toy-server-developer-shourav.vercel.app/toyDetails/${params.id}`)
+            },
+            
+            {
+                path:'/updateToy/:id',
+                element:<PrivetRoutes> <UpdateToy> </UpdateToy> </PrivetRoutes>,
                 loader : ({params}) => fetch(`https://queen-toy-server-developer-shourav.vercel.app/toyDetails/${params.id}`)
             },
             

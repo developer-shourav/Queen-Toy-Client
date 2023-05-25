@@ -65,9 +65,9 @@ const AddAToy = () => {
   
   return (
     <div className="mt-10 container mx-auto px-3">
-      <div className="text-center text-3xl font-bold   flex items-center justify-center gap-3">
+      <div className="text-center text-2xl md:text-3xl font-bold   flex items-center justify-center gap-3">
         {" "}
-        <HiOutlineViewGridAdd className="inline-block text-5xl text-pink-500" />{" "}
+        <HiOutlineViewGridAdd className="inline-block text-4xl md:text-5xl text-pink-500" />{" "}
         <span>Add A toy</span>
       </div>
 

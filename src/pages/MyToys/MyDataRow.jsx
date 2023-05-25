@@ -2,6 +2,7 @@ import React from "react";
 import {ImBin} from 'react-icons/im';
 import {GoPencil} from 'react-icons/go';
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyDataRow = ({toyData, loadRemaining}) => {
  const {_id, toyName, photo, price, subCategory, quantity} = toyData;
@@ -60,9 +61,9 @@ const MyDataRow = ({toyData, loadRemaining}) => {
       <td>{subCategory}</td>
       <td>{quantity}</td>
       <th>
-        <button className="btn bg-green-900 hover:bg-green-950 border-0">
+        <Link to={`/updateToy/${_id}`} className="btn bg-green-900 hover:bg-green-950 border-0">
           <GoPencil className="text-lg -mt-1 me-1" /> Update
-        </button>
+        </Link>
       </th>
       <th>
         <button onClick={handleDelete}  className="btn bg-[#ff0627] hover:bg-red-700 border-0 ">
