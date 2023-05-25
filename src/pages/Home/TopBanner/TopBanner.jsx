@@ -2,19 +2,9 @@ import React from "react";
 import Banner from "../../../assets/images/banner-img/banner1.png";
 import SliderImg1 from "../../../assets/images/banner-img/sindralla.png";
 import SliderImg2 from "../../../assets/images/banner-img/sindralla2.png";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+
 const TopBanner = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: 'ease',
-      delay: 1,
-      once: false,
-      mirror: false,
-    });
-  }, []);
+
   return (
     <div className="container mx-auto">
 
@@ -29,18 +19,18 @@ const TopBanner = () => {
         </div>
 
        {/*--------First Full Image ------------  */}
-        <div data-aos="zoom-in" data-aos-once="false">
+        <div className="overflow-x-hidden" data-aos="zoom-in" data-aos-once="false">
           <img className="w-10/12 mx-auto" src={Banner} alt="" />
         </div>
       </div>
 
     {/* ------------Second Image Section ---------------- */}
       <div className="flex flex-col md:flex-row justify-between items-start md:gap-10 mt-5 md:mt-10 lg:mt-20">
-        <div data-aos="fade-right" data-aos-once="false"  className="md:w-1/2 ">
+        <div data-aos="fade-up" data-aos-once="false"  className="md:w-1/2 overflow-x-hidden">
           <img src={SliderImg1} className="w-7/12 md:w-10/12 lg:w-8/12 text-center mx-auto " alt="" />
         </div>
 
-        <div data-aos="fade-left" data-aos-once="false" className="px-5 md:px-0 md:w-1/2  md:mt-16">
+        <div data-aos="fade-down" data-aos-once="false" className="px-5 overflow-x-hidden md:px-0 md:w-1/2  md:mt-16">
           <h3 className="font-bold text-xl md:text-2xl  lg:text-4xl md:my-3 ">We Are the best</h3>
 
           <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl text-pink-600 custom-text-shadow ">
@@ -61,7 +51,7 @@ const TopBanner = () => {
 
         {/* ---------Third Image Section -------------- */}
       <div className="flex flex-col-reverse md:flex-row   mx-auto justify-between items-start md:gap-10 mt-5 md:mt-10 lg:mt-20">
-        <div data-aos="fade-left" data-aos-once="false" className="md:w-1/2 px-5 md:px-0  md:ps-12  md:mt-6 lg:mt-16 ">
+        <div data-aos="fade-up" data-aos-once="false" className="md:w-1/2 overflow-x-hidden px-5 md:px-0  md:ps-12  md:mt-6 lg:mt-16 ">
           <h3 className="font-bold text-xl md:text-2xl  lg:text-4xl md:my-3 ">Get The Toy You want</h3>
 
           <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl logo-text-shadow text-[#18b1b9] ">
@@ -78,7 +68,7 @@ const TopBanner = () => {
           </a>
         </div>
 
-        <div data-aos="fade-right" data-aos-once="false" className="md:w-1/2 ">
+        <div data-aos="fade-down" data-aos-once="false" className="md:w-1/2 overflow-x-hidden">
           <img src={SliderImg2} className="w-7/12 md:w-10/12 lg:w-8/12 text-center mx-auto" alt="" />
         </div>
       </div>

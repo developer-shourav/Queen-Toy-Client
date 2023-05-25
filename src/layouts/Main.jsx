@@ -3,7 +3,6 @@ import Header from '../components/Header/Header';
 import { Outlet, useNavigation } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 import SpinnerLoader from '../components/SpinnerLoader/SpinnerLoader';
-
 const Main = () => {
     const navigation = useNavigation();
     return (
