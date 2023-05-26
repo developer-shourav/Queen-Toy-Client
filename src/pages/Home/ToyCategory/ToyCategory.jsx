@@ -52,14 +52,14 @@ const ToyCategory = () => {
         </h2>
         <img
           src={BorderB}
-          className="text-center w-3/6 md:w-4/12 lg:w-4/12 mx-auto"
+          className="text-center w-4/6 md:w-5/12 lg:w-4/12 mx-auto"
           alt=""
         />
 
         {/* ---------- Toy Categories ---------- */}
 
         {/* -------- Tab Section ------- */}
-        <div className=" text-center font-bold space-x-1 md:space-x-3 space-y-2  md:mt-10">
+        <div className=" hidden md:block text-center font-bold space-x-1 md:space-x-3 space-y-2  md:mt-10">
           <button
             onClick={handleAllToy}
             className={`btn  rounded-full px-6  hover:bg-pink-600 hover:text-white ${
@@ -90,6 +90,43 @@ const ToyCategory = () => {
           <button
             onClick={handlePrincesToy}
             className={`btn rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "princes" ? "bg-pink-500 text-white" : " text-black bg-white"
+            }`}
+          >
+           Disney Princes
+          </button>
+        </div>
+        <div className="block md:hidden text-center font-bold space-x-1 md:space-x-3 space-y-2  md:mt-10">
+          <button
+            onClick={handleAllToy}
+            className={`btn btn-sm  rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "all" ? "bg-pink-500 text-white" : " text-black bg-white"
+            }`}
+          >
+            All
+          </button>
+
+          <button
+            onClick={handleQueensToy}
+            className={`btn btn-sm rounded-full  md:px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "queen"? "bg-pink-500 text-white" : " text-black bg-white"
+            }`}
+          >
+            Disney Queens
+          </button>
+
+          <button
+            onClick={handleEvilsToy}
+            className={`btn btn-sm rounded-full px-6  hover:bg-pink-600 hover:text-white ${
+              tabStyle == "evil" ? "bg-pink-500 text-white" : " text-black bg-white"
+            }`}
+          >
+           Disney Evil 
+          </button>
+
+          <button
+            onClick={handlePrincesToy}
+            className={`btn btn-sm rounded-full px-6  hover:bg-pink-600 hover:text-white ${
               tabStyle == "princes" ? "bg-pink-500 text-white" : " text-black bg-white"
             }`}
           >
