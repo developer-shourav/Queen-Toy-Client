@@ -40,7 +40,7 @@ const Register = () => {
     const password = form.password.value;
     const photo = form.photo.value;
     
-/* -----------Password Validation----------- */
+ /* -----------Password Validation----------- */
     if( password.length < 6 ){
      
       setErrorMessage('Error: Your Password must be at least 6 character')
@@ -48,7 +48,7 @@ const Register = () => {
     }
 
     else{
-       /* ------- Email password User creation -------------- */
+    /* ------- Email password User creation -------------- */
     createEmailPassUser(email, password)
     .then((result) => {
       const createdUser = result.user;

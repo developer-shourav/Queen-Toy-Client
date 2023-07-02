@@ -1,37 +1,50 @@
 import React from 'react';
   
 const PhotoGallery = () => {
-    const image1 = 'https://jokomisiada.pl/eng_pl_Hasbro-Disney-Doll-Rapunzel-Tangled-ZA3642-15904_4.jpg';
-    const image2 = 'https://live.staticflickr.com/4184/34672508212_c570079b45_b.jpg';
-    const image3 = 'https://m.media-amazon.com/images/I/61sTdh33YZL._SX425_.jpg';
-    const image4 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460022220242?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
-    const image9 = 'https://m.media-amazon.com/images/I/71fgaDOy8kS._AC_UF894,1000_QL80_.jpg';
-    const image10 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460033511124-2?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
-    const image11 = 'https://5.imimg.com/data5/EK/LW/NY/SELLER-6479327/jasmine-disney-princess-figurine-500x500.jpg';
-    const image12 = 'https://m.media-amazon.com/images/I/81t2O0EbsiL._AC_UF894,1000_QL80_.jpg';
-    const image13 = 'https://cf.shopee.ph/file/a4800c031ddda2dc6039d3dcab42f21e';
-    const image14 = 'https://m.media-amazon.com/images/I/61d1Wz1z4XS._AC_SY355_.jpg';
-    const image15 = 'https://eoms.cutpricebd.com/oms_products/big/164182003631438_33519.png';
-    const image16 = 'https://cdn.s7.shopdisney.eu/is/image/DisneyStoreES/460011777498?fmt=jpeg&qlt=90&wid=652&hei=652&defaultImage=no-image-image_uk';
+   
+    const image1 = 'https://i.ibb.co/T0nqXKp/toy-galley-photo1.jpg';
+    const image2 = 'https://i.ibb.co/RHs1L8W/toy-galley-photo2.jpg';
+    const image3 = 'https://i.ibb.co/wzBXyJM/toy-galley-photo3.jpg';
+    const image4 = 'https://i.ibb.co/P481P1V/toy-galley-photo4.jpg';
+    const image5 = 'https://i.ibb.co/YQtnjp8/toy-galley-photo5.jpg';
+    const image6 = 'https://i.ibb.co/jMC7y21/toy-galley-photo6.jpg'
+    const image7 = 'https://i.ibb.co/hsvHYRB/toy-galley-photo7.webp';
+    const image8 = 'https://i.ibb.co/FVwt3dn/toy-galley-photo8.jpg';
+    const image9 = 'https://i.ibb.co/yQQqXL7/toy-galley-photo9.jpg';
+    const image10 = 'https://i.ibb.co/kX3b26B/toy-galley-photo10.jpg';
+    const image11 = 'https://i.ibb.co/zQvg01J/toy-galley-photo11.jpg';
+    const image12 = 'https://i.ibb.co/7J642rk/toy-galley-photo12.jpg';
 
     return (
         <div className='overflow-hidden'>
            <div className='grid grid-cols-3 lg:grid-cols-4 gap-10 px-5 gallery mt-10'>
             <div >
-                <img src={image9}  alt="" />
+                <img src={image1}  alt="" />
             </div>
             <div className=''>
-                <img src={image4} alt="" />
+                <img src={image2} alt="" />
             </div>
             <div>
                 <img src={image3} alt="" />
             </div>
             <div>
-                <img src={image12} alt="" />
+                <img src={image4} alt="" />
             </div>
            
             <div>
-                <img src={image1} alt="" />
+                <img src={image5} alt="" />
+            </div>
+            <div>
+                <img src={image6} alt="" />
+            </div>
+            <div>
+                <img src={image7} alt="" />
+            </div>
+            <div>
+                <img src={image8} alt="" />
+            </div>
+            <div>
+                <img src={image9} alt="" />
             </div>
             <div>
                 <img src={image10} alt="" />
@@ -40,19 +53,7 @@ const PhotoGallery = () => {
                 <img src={image11} alt="" />
             </div>
             <div>
-                <img src={image2} alt="" />
-            </div>
-            <div>
-                <img src={image13} alt="" />
-            </div>
-            <div>
-                <img src={image14} alt="" />
-            </div>
-            <div>
-                <img src={image15} alt="" />
-            </div>
-            <div>
-                <img src={image16} alt="" />
+                <img src={image12} alt="" />
             </div>
            </div>
         </div>
